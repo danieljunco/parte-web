@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="doctoresWeb">
+    
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">GDM - Monitor de migrañas</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Episodios por ID</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" ng-controller="DoctoresCtrl as docCtrl">
+
+    	<form class="form-horizontal" ng-submit="docCtrl.submit()">
+    		<div class="col-md-12">
+  				<div class="input-group">
+			    	<input type="text" class="form-control" placeholder="id del paciente" ng-model="docCtrl.paciente.id">
+			    	<span class="input-group-btn">
+			        	<button class="btn btn-default" type="submit">Ver episodios del paciente</button>
+			      	</span>
+		    	</div>
+      		</div>
+      	</form>
+		<br>
+		<br>
+		<br>
+      	<table class="table table-bordered">
+      		<thead>
+      			<tr>
+	      			<th>#</th>
+	      			<th>Fecha</th>
+	      			<th>Intensidad</th>
+	      			<th>Medicamento</th>
+	      			<th>Funciono</th>
+	      			<th>Posibles causas</th>
+      			</tr>
+      		</thead>
+      		<tbody>
+      			<tr ng-repeat="episodio in docCtrl.paciente.episodios">
+      				<td ng-bind="$index"></td>
+      				<td ng-bind="episodio.fecha | date"></td>
+      				<td ng-bind="episodio.intensidad"></td>
+      				<td ng-bind="episodio.medicamento"></td>
+      				<td ng-bind="episodio.funciono"></td>
+      				<td>
+      					<ul>
+      						<li ng-repeat="causa in episodio.causas" ng-bind="causa.nombre"></li>
+      					</ul>
+      				</td>
+      			</tr>
+      		</tbody>
+      	</table>
+		<br>
+		<br>
+		<br>
+		<form class="form-horizontal" ng-submit="docCtrl.filtrar()">
+    		<div class="col-md-5">
+			    <input type="text" class="form-control" placeholder="fecha inicio AAAA-mm-dd" ng-model="docCtrl.inicio">
+      		</div>
+      		<div class="col-md-5">
+      			<input type="text" class="form-control" placeholder="fecha fin AAAA-mm-dd" ng-model="docCtrl.fin">
+      		</div>
+			<div class="col-md-2">
+				<button type="submit" class="btn btn-primary">Filtrar Resultados</button>
+			</div>
+      	</form>
+	</div><!-- /.container -->
+		
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="/javascripts/controllerDoctores.js"></script>
+  </body>
+</html>

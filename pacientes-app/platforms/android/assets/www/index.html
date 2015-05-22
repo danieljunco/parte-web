@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>GDM - Monitor de migrañas</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">GDM - Monitor de migrañas</a>
+            </div>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse" id="tabs">
+                <ul class="nav navbar-nav side-nav">
+                    <li id="li_inicio" class="active">
+                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Inicio</a>
+                    </li>
+                    <li id="li_pacientes">
+                        <a href="charts.html"><i class="fa fa-fw fa-users"></i> Pacientes</a>
+                    </li>
+                    <li id="li_medicamentos">
+                        <a href="tables.html"><i class="fa fa-fw fa-medkit"></i> Medicamentos</a>
+                    </li>
+                    <li id="li_causas">
+                        <a href="forms.html"><i class="fa fa-fw fa-stethoscope"></i> Posibles causas</a>
+                    </li>
+                    <li id="li_episodios">
+                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-bolt"></i> Episodios</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid" id="inicio">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            INICIO <small>Resumen de estadisticas</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-dashboard"></i> Inicio
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-primary" id="medicamentos_panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-medkit fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Medicamentos</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver Detalles</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="panel panel-green" id="causas_panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-stethoscope fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Posibles causas</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver detalles</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="panel panel-red" id="episodios_panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-bolt fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">Episodios</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver detalles</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Causas más comunes</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid #inicio -->
+            
+            <div class="container-fluid" id="paciente">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            PACIENTES <small>Registro de nuevos pacientes</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-users"></i> Pacientes
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-offset-3">
+
+                        <form role="form" id="form_paciente">
+
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input class="form-control" type="text" id="paciente_nombre">
+                                <p class="help-block">El nombre del paciente a registrar</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Apellido</label>
+                                <input class="form-control" type="text" id="paciente_apellido">
+                                <p class="help-block">El apellido del paciente a registrar</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Cedula</label>
+                                <input class="form-control" type="text" id="paciente_cedula">
+                                <p class="help-block">La cedula del paciente a registrar</p>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Registrar nuevo paciente</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- /.container-fluid #paciente -->
+            
+            <div class="container-fluid" id="causa">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            POSIBLES CAUSAS <small>Registro de posibles causas</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-stethoscope"></i> Posibles causas
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-offset-3">
+
+                        <form role="form" id="form_causas">
+                            <div class="form-group">
+                                <label>ID usuario</label>
+                                <input class="form-control" id="causas_id" type="text">
+                                <p class="help-block">El nombre de la causa a agregar</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input class="form-control" id="causas_nombre" type="text">
+                                <p class="help-block">El nombre de la causa a agregar</p>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Agregar nueva causa</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- /.container-fluid #causa -->
+            
+            <div class="container-fluid" id="medicamento">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            MEDICAMENTOS <small>Registro de medicamentos utilizados</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-medkit"></i> Medicamentos
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-offset-3">
+
+                        <form role="form" id="form_medicamentos">
+                            <div class="form-group">
+                                <label>ID usuario</label>
+                                <input class="form-control" id="medicamentos_id" type="text">
+                                <p class="help-block">El nombre de la causa a agregar</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input class="form-control" id="medicamentos_nombre" type="text">
+                                <p class="help-block">El nombre del medicamento a agregar</p>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Agregar nuevo medicamento</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid #medicamento -->
+            
+            <div class="container-fluid" id="episodio">
+                <form role="form" id="pre_episodio">
+                    <div class="form-group">
+                        <label>Id paciente</label>
+                        <input class="form-control" id="episodio_id" type="text">
+                        <p class="help-block">Id del paciente con el episodio</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Obtener info paciente</button>
+                </form>
+                <form role="form" id="crear_episodio">
+                    <div class="form-group">
+                        <label>Causas</label>
+                        <select multiple class="form-control" id="select_causas">
+                            
+                        </select>
+                        <p class="help-block">El nombre del medicamento a agregar</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Medicamento</label>
+                        <select class="form-control" id="select_medicamento">
+                            
+                        </select>
+                        <p class="help-block">El nombre del medicamento que uso</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Intensidad</label>
+                        <input type="text" class="form-control" id="intensidad"/>
+                        <p class="help-block">El nombre del medicamento que uso</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Agregar nuevo episodio</button>
+                </form>
+            </div>
+            <!-- /.container-fluid #episodio -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--<script src="js/plugins/morris/morris-data.js"></script>-->
+    <script type="text/javascript">
+        $(function(){
+            var cache = {
+                li_inicio : $('#li_inicio'),
+                li_paciente : $('#li_pacientes'),
+                li_medicamento : $('#li_medicamentos'),
+                li_causa : $('#li_causas'),
+                li_episodio : $('#li_episodios')
+            };
+            var divs = {
+                inicio : $('#inicio'),
+                pacientes : $('#paciente'),
+                causas : $('#causa'),
+                medicamentos : $('#medicamento'),
+                episodios : $('#episodio')
+            };
+            
+            $('#form_paciente').submit(function(event){
+                event.preventDefault();
+                var json = {
+                    nombre: $('#paciente_nombre').val(),
+                    apellido: $('#paciente_apellido').val(),
+                    cedula: $('#paciente_cedula').val()
+                };
+                $('#paciente_nombre').val("");
+                $('#paciente_apellido').val("");
+                $('#paciente_cedula').val("");
+                ajax(json,'paciente');
+            });
+            
+            $('#form_causas').submit(function(event){
+               event.preventDefault();
+               var json = {
+                   nombre: $('#causas_nombre').val()
+               };
+               $('#causas_nombre').val("");
+               ajax(json,'paciente/'+$('#causas_id').val()+'/causa');
+               $('#causas_id').val("");
+            });
+            
+            $('#form_medicamentos').submit(function(event){
+               event.preventDefault();
+               var json = {
+                   nombre: $('#medicamentos_nombre').val()
+               };
+               $('#medicamentos_nombre').val("");
+               ajax(json,'paciente/'+$('#medicamentos_id').val()+'/medicamento');
+               $('#medicamentos_id').val("");
+            });
+            
+            function ajax(json, ruta){
+                $.ajax({
+                    method:'POST',
+                    url:'http://infinite-temple-1902.herokuapp.com/'+ruta,
+                    data:JSON.stringify(json),
+                    headers:{
+                        'Content-Type': 'application/json'
+                    }
+                }).success(function(data){
+                    alert('Registrado con exito con el id '+ data.id);
+                });
+            }
+            var li_activo = $(cache.li_inicio);
+            
+            var div_activo = $(divs.inicio);
+            
+            for(var key in cache){
+                $(cache[key]).click($(cache[key]),toggleActive);
+            }
+            function toggleActive(e){
+                e.preventDefault();
+                li_activo.removeClass();
+                li_activo = $(this);
+                li_activo.addClass("active");
+                div_activo.css("display","none");
+                var k = divs[e.data.selector.split("_")[1]];
+                div_activo = $(k);
+                div_activo.css("display","block");
+            }
+            
+            $('#episodios_panel').click(function(e){
+                e.preventDefault();
+                $(cache.li_episodio).trigger("click");
+            });
+            
+            $('#causas_panel').click(function(e){
+                e.preventDefault();
+                $(cache.li_causa).trigger("click");
+            });
+            
+            $('#medicamentos_panel').click(function(e){
+                e.preventDefault();
+                $(cache.li_medicamento).trigger("click");
+            });
+            
+            $('#pre_episodio').submit(function(e){
+               e.preventDefault();
+               var episodio={
+                 paciente:{
+                     id:$("#episodio_id").val()
+                 }  
+               };
+               $.ajax({
+                   method:'GET',
+                   url:'http://infinite-temple-1902.herokuapp.com/paciente/'+episodio.paciente.id+'/causa'
+               }).success(function(data){
+                   console.log(data);
+                   var causas = data.causas;
+                   var output = [];
+                   for(var i_causas = 0; i_causas<causas.length;i_causas++){
+                       output.push('<option value="'+causas[i_causas].id+'">'+causas[i_causas].nombre+'</option>');
+                   }
+                   $('#select_causas').html(output.join(' '));
+               });
+               $.ajax({
+                   method:'GET',
+                   url:'http://infinite-temple-1902.herokuapp.com/paciente/'+episodio.paciente.id+'/medicamento'
+               }).success(function(data){
+                   console.log(data);
+                   var causas = data.medicamentos;
+                   var output = [];
+                   for(var i_causas = 0; i_causas<causas.length;i_causas++){
+                       output.push('<option value="'+causas[i_causas].id+'">'+causas[i_causas].nombre+'</option>');
+                   }
+                   $('#select_medicamento').html(output.join(' '));
+               });
+               $("#crear_episodio").submit(function(evv){
+                   evv.preventDefault();
+                   episodio.intensidad = $("#intensidad").val();
+                   episodio.medicamento = {
+                       id:$("#select_medicamento").val()
+                   };
+                   var causas = $("#select_causas").val();
+                   var causasDTO = [];
+                   for(var cc =0; cc<causas.length;cc++){
+                       if(causas[cc]!== undefined)
+                        causasDTO.push({id:causas[cc]});
+                   }
+                   episodio.causas=causasDTO;
+                   console.log(episodio);
+                   $.ajax({
+                       method:'POST',
+                       url:'http://infinite-temple-1902.herokuapp.com/paciente/'+episodio.paciente.id+'/episodio',
+                       data:JSON.stringify(episodio),
+                       headers:{
+                        'Content-Type': 'application/json'
+                        }
+                   }).success(function(blabla){
+                       alert("episodio registrado exitosamente con id "+blabla.id);
+                   });
+               });
+            });
+            
+            
+        });
+    </script>
+
+</body>
+
+</html>

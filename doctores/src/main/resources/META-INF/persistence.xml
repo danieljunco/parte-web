@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="DoctoresPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>gdm.tdm.doctores.pojos.Doctor</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-107-20-244-236.compute-1.amazonaws.com:5432/d1f6tenoojc453?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory"/>
+      <property name="javax.persistence.jdbc.user" value="ziicrdkklfdccg"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="jzt8v5i-g0Y85P6DHPWSAYBXeW"/>
+      <!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="PacientesPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>gdm.tdm.doctores.pojos.Paciente</class>
+    <class>gdm.tdm.doctores.pojos.Episodio</class>
+    <class>gdm.tdm.doctores.pojos.Medicamento</class>
+    <class>gdm.tdm.doctores.pojos.Causa</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-23-21-231-14.compute-1.amazonaws.com:5432/d3pqnr5voidcod?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory"/>
+      <property name="javax.persistence.jdbc.user" value="fdbjpsmgnfaqzq"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="H6pvM6ncxd0ajN7Obbfj6f4Mgz"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+    </properties>
+  </persistence-unit>
+</persistence>
